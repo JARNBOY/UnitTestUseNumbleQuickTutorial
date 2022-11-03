@@ -10,7 +10,7 @@ import Foundation
 
 class DisplayImageDetailMockWorker: DisplayImageDetailWorker {
     var isFail:Bool = false
-    let mock = DisplayImageDetailMock()
+    let mock = DisplayImageDetailMockObject()
     
     override func getLoanCancelReasonList(imageRandomId: String, aCompletion: @escaping (DisplayImageDetailModels.DetailModels.Response?) -> Void, fail: @escaping (String?) -> ()) {
         

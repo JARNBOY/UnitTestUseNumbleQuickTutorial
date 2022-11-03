@@ -9,7 +9,7 @@ import Foundation
 @testable import UnitTestUseNumbleQuickTutorial
 import SwiftyJSON
 
-class DisplayImageDetailMock {
+class DisplayImageDetailMockObject {
     var picsumPhotosInfoStatusSuccess: Data {
         return """
     {
