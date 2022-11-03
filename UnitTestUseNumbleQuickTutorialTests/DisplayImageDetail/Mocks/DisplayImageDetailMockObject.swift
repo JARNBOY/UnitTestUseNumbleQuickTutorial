@@ -43,3 +43,11 @@ class DisplayImageDetailMockObject {
     }
 }
 
+extension DisplayImageDetailMockObject {
+    var mockRequestDisplayImageDetail: DisplayImageDetailModels.DetailModels.Request {
+        return DisplayImageDetailModels.DetailModels.Request(imageID: "116")
+    }
+    var mockGetExtraNameText: String {
+        return "This name is mock person from mock picsum"
+    }
+}

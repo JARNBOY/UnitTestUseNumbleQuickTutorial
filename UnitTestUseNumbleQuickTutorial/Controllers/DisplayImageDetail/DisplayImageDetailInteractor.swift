@@ -23,13 +23,12 @@ protocol DisplayImageDetailDataStore {
 
 class DisplayImageDetailInteractor: DisplayImageDetailBusinessLogic, DisplayImageDetailDataStore {
     var presenter: DisplayImageDetailPresentationLogic?
-    var worker: DisplayImageDetailWorker?
+    var worker: DisplayImageDetailWorker = DisplayImageDetailWorker(with: DisplayImageDetailService())
     
     // MARK: Do something
     func requestDisplayImage(request: DisplayImageDetailModels.DetailModels.Request) {
         self.presenter?.presentStartLoading()
-        worker = DisplayImageDetailWorker(with: DisplayImageDetailService())
-        worker?.getLoanCancelReasonList(imageRandomId: request.imageID,aCompletion: { responseModel in
+        worker.getLoanCancelReasonList(imageRandomId: request.imageID,aCompletion: { responseModel in
             self.presenter?.presentStopLoading()
             self.presenter?.presentDisplayImage(response: responseModel)
         }, fail: { error in

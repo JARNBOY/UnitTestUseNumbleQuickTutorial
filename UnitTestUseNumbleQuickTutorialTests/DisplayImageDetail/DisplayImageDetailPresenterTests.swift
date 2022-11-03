@@ -24,7 +24,7 @@ class DisplayImageDetailPresenterTests: QuickSpec {
             // MARK: Presentation logic
             context("presentDisplayImage") {
                 it("Working") {
-                    let mock = DisplayImageDetailMock().toPicsumPhotosInfoSuccess()
+                    let mock = DisplayImageDetailMockObject().toPicsumPhotosInfoSuccess()
                     presenter.presentDisplayImage(response: mock)
                     expect(viewController.isPresentShowDisplayImage) == true
                 }
