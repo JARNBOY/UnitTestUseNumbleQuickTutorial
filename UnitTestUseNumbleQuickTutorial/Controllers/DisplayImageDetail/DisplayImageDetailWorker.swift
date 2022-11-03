@@ -11,10 +11,23 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-class DisplayImageDetailWorker
-{
-  func doSomeWork()
-  {
-  }
+class DisplayImageDetailWorker {
+    
+    var service: DisplayImageDetailService!
+    
+    init(with aService: DisplayImageDetailService) {
+        service = aService
+    }
+    // MARK: Business Logic
+    func getLoanCancelReasonList(imageRandomId: String,aCompletion: @escaping (DisplayImageDetailModels.DetailModels.Response?) -> Void, fail: @escaping (_ error: String?) -> ()) {
+        
+        service.requestImageDisplayDetails(imageRandomId: imageRandomId) { aJSON in
+            aCompletion(DisplayImageDetailModels.DetailModels.Response(json: aJSON))
+        } aFailure: { error in
+            fail(error)
+        }
+
+    }
 }

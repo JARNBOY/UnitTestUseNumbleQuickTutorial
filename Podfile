@@ -8,7 +8,9 @@ target 'UnitTestUseNumbleQuickTutorial' do
   # Pods for UnitTestUseNumbleQuickTutorial
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
-
+  pod 'SwiftyJSON'
+  pod 'SDWebImage'
+  
   target 'UnitTestUseNumbleQuickTutorialTests' do
     inherit! :search_paths
     # Pods for testing

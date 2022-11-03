@@ -12,30 +12,34 @@
 
 import UIKit
 
-protocol DisplayImageDetailBusinessLogic
-{
-  func doSomething(request: DisplayImageDetail.Something.Request)
+protocol DisplayImageDetailBusinessLogic {
+    func requestDisplayImage(request: DisplayImageDetailModels.DetailModels.Request)
+    func getExtraNameText() -> String
 }
 
-protocol DisplayImageDetailDataStore
-{
-  //var name: String { get set }
+protocol DisplayImageDetailDataStore {
+    //var name: String { get set }
 }
 
-class DisplayImageDetailInteractor: DisplayImageDetailBusinessLogic, DisplayImageDetailDataStore
-{
-  var presenter: DisplayImageDetailPresentationLogic?
-  var worker: DisplayImageDetailWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: DisplayImageDetail.Something.Request)
-  {
-    worker = DisplayImageDetailWorker()
-    worker?.doSomeWork()
+class DisplayImageDetailInteractor: DisplayImageDetailBusinessLogic, DisplayImageDetailDataStore {
+    var presenter: DisplayImageDetailPresentationLogic?
+    var worker: DisplayImageDetailWorker?
     
-    let response = DisplayImageDetail.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    // MARK: Do something
+    func requestDisplayImage(request: DisplayImageDetailModels.DetailModels.Request) {
+        self.presenter?.presentStartLoading()
+        worker = DisplayImageDetailWorker(with: DisplayImageDetailService())
+        worker?.getLoanCancelReasonList(imageRandomId: request.imageID,aCompletion: { responseModel in
+            self.presenter?.presentStopLoading()
+            self.presenter?.presentDisplayImage(response: responseModel)
+        }, fail: { error in
+            self.presenter?.presentStopLoading()
+            self.presenter?.presentError()
+        })
+        
+    }
+    
+    func getExtraNameText() -> String {
+        return "This name is real person from website picsum"
+    }
 }

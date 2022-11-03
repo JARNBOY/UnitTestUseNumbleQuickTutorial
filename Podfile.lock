@@ -4,12 +4,18 @@ PODS:
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
+  - SDWebImage (5.13.2):
+    - SDWebImage/Core (= 5.13.2)
+  - SDWebImage/Core (5.13.2)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Nimble
   - Quick
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - SDWebImage
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -17,13 +23,17 @@ SPEC REPOS:
     - Quick
     - RxCocoa
     - RxSwift
+    - SDWebImage
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Nimble: 81a6ab1afd3d84a75b18b910825f247ce5d3686a
   Quick: 4d5ab9e81f0a632cbf9bc4f3069b55e5eeb175df
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 936e583202ef89ba1df11752aae320f2d5502063
+PODFILE CHECKSUM: 2a6dc93fc3abc351ed8d6ac34fbe2ee4dda00f05
 
 COCOAPODS: 1.11.3

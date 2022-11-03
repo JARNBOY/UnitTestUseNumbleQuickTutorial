@@ -12,20 +12,35 @@
 
 import UIKit
 
-protocol DisplayImageDetailPresentationLogic
-{
-  func presentSomething(response: DisplayImageDetail.Something.Response)
+protocol DisplayImageDetailPresentationLogic {
+    func presentDisplayImage(response: DisplayImageDetailModels.DetailModels.Response?)
+    func presentStartLoading()
+    func presentStopLoading()
+    func presentError()
 }
 
-class DisplayImageDetailPresenter: DisplayImageDetailPresentationLogic
-{
-  weak var viewController: DisplayImageDetailDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: DisplayImageDetail.Something.Response)
-  {
-    let viewModel = DisplayImageDetail.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+class DisplayImageDetailPresenter: DisplayImageDetailPresentationLogic {
+    weak var viewController: DisplayImageDetailDisplayLogic?
+    
+    // MARK: Do something
+    
+    func presentDisplayImage(response: DisplayImageDetailModels.DetailModels.Response?) {
+        let viewModel = DisplayImageDetailModels.DetailModels.ViewModel(author: response?.author ?? "",
+                                                                        width: response?.width ?? "",
+                                                                        height: response?.height ?? "",
+                                                                        urlImage: response?.downloadUrl ?? "")
+        viewController?.displayDisplayImage(viewModel: viewModel)
+    }
+    
+    func presentStartLoading() {
+        viewController?.displayStartLoading()
+    }
+    
+    func presentStopLoading() {
+        viewController?.displayStopLoading()
+    }
+    
+    func presentError() {
+        viewController?.displayError()
+    }
 }

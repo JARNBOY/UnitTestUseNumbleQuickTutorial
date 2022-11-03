@@ -11,6 +11,7 @@
 		782C1EFB26E06D7B9767A279 /* Pods_UnitTestUseNumbleQuickTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBE927400272A24943CFC8C /* Pods_UnitTestUseNumbleQuickTutorial.framework */; };
 		A15D1539F4D86F2D8E6FB7F0 /* Pods_UnitTestUseNumbleQuickTutorial_UnitTestUseNumbleQuickTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA1226031C9CBD768E15D75 /* Pods_UnitTestUseNumbleQuickTutorial_UnitTestUseNumbleQuickTutorialUITests.framework */; };
 		FB3D0DEB2913756500A58C92 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D0DEA2913756500A58C92 /* URLRequest+Extension.swift */; };
+		FB3D0DED2913824300A58C92 /* DisplayImageDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D0DEC2913824300A58C92 /* DisplayImageDetailService.swift */; };
 		FBB7728529136B0900318ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7728429136B0900318ED5 /* AppDelegate.swift */; };
 		FBB7728729136B0900318ED5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7728629136B0900318ED5 /* SceneDelegate.swift */; };
 		FBB7728929136B0900318ED5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7728829136B0900318ED5 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		CC29B4F8E8D3C32603254DC2 /* Pods-UnitTestUseNumbleQuickTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestUseNumbleQuickTutorialTests.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestUseNumbleQuickTutorialTests/Pods-UnitTestUseNumbleQuickTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4686A3446EE155C39488370 /* Pods-UnitTestUseNumbleQuickTutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestUseNumbleQuickTutorialTests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestUseNumbleQuickTutorialTests/Pods-UnitTestUseNumbleQuickTutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB3D0DEA2913756500A58C92 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		FB3D0DEC2913824300A58C92 /* DisplayImageDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImageDetailService.swift; sourceTree = "<group>"; };
 		FBB7728129136B0900318ED5 /* UnitTestUseNumbleQuickTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestUseNumbleQuickTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB7728429136B0900318ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBB7728629136B0900318ED5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,12 +204,13 @@
 			isa = PBXGroup;
 			children = (
 				FBB7728A29136B0900318ED5 /* Main.storyboard */,
+				FBB772B929136EFB00318ED5 /* DisplayImageDetailViewController.swift */,
+				FBB772BA29136EFB00318ED5 /* DisplayImageDetailInteractor.swift */,
 				FBB772B529136EFB00318ED5 /* DisplayImageDetailPresenter.swift */,
 				FBB772B629136EFB00318ED5 /* DisplayImageDetailWorker.swift */,
 				FBB772B729136EFB00318ED5 /* DisplayImageDetailRouter.swift */,
 				FBB772B829136EFB00318ED5 /* DisplayImageDetailModels.swift */,
-				FBB772B929136EFB00318ED5 /* DisplayImageDetailViewController.swift */,
-				FBB772BA29136EFB00318ED5 /* DisplayImageDetailInteractor.swift */,
+				FB3D0DEC2913824300A58C92 /* DisplayImageDetailService.swift */,
 			);
 			path = DisplayImageDetail;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				FBB772BC29136EFB00318ED5 /* DisplayImageDetailWorker.swift in Sources */,
 				FBB772C029136EFB00318ED5 /* DisplayImageDetailInteractor.swift in Sources */,
 				FBB7728929136B0900318ED5 /* ViewController.swift in Sources */,
+				FB3D0DED2913824300A58C92 /* DisplayImageDetailService.swift in Sources */,
 				FBB7728529136B0900318ED5 /* AppDelegate.swift in Sources */,
 				FB3D0DEB2913756500A58C92 /* URLRequest+Extension.swift in Sources */,
 				FBB772BF29136EFB00318ED5 /* DisplayImageDetailViewController.swift in Sources */,
