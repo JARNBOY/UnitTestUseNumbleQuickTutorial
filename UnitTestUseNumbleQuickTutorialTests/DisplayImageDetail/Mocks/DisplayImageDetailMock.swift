@@ -42,3 +42,4 @@ class DisplayImageDetailMock {
         return "general_error"
     }
 }
+

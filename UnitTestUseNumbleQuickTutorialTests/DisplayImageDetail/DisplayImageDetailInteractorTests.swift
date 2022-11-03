@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import Quick
+import Nimble
+
+@testable import UnitTestUseNumbleQuickTutorial
+class DisplayImageDetailInteractorTests: QuickSpec {
+    override func spec() {
+        describe("DisplayImageDetailInteractorTests") {
+            
+        }
+    }
+}
