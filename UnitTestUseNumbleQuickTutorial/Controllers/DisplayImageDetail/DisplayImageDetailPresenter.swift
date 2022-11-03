@@ -20,7 +20,7 @@ protocol DisplayImageDetailPresentationLogic {
 }
 
 class DisplayImageDetailPresenter: DisplayImageDetailPresentationLogic {
-    weak var viewController: DisplayImageDetailDisplayLogic?
+    weak var viewController: DisplayImageDetailView?
     
     // MARK: Do something
     

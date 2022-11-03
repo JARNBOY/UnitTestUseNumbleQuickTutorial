@@ -13,14 +13,14 @@
 import UIKit
 import SDWebImage
 
-protocol DisplayImageDetailDisplayLogic: AnyObject {
+protocol DisplayImageDetailView: AnyObject {
     func displayDisplayImage(viewModel: DisplayImageDetailModels.DetailModels.ViewModel)
     func displayStartLoading()
     func displayStopLoading()
     func displayError()
 }
 
-class DisplayImageDetailViewController: UIViewController, DisplayImageDetailDisplayLogic {
+class DisplayImageDetailViewController: UIViewController, DisplayImageDetailView {
     
     @IBOutlet weak var indicatorLoading: UIActivityIndicatorView!
     @IBOutlet weak var imgDisplay: UIImageView!
@@ -82,7 +82,7 @@ class DisplayImageDetailViewController: UIViewController, DisplayImageDetailDisp
         interactor?.requestDisplayImage(request: request)
     }
     
-    // MARK: DisplayImageDetailDisplayLogic
+    // MARK: DisplayImageDetailView
     func displayDisplayImage(viewModel: DisplayImageDetailModels.DetailModels.ViewModel) {
         DispatchQueue.main.async {
             self.imgDisplay.sd_setImage(with: URL(string: viewModel.urlImage), placeholderImage: UIImage(named: ""))
