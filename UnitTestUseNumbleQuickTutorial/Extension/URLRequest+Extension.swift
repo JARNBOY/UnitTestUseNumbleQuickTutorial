@@ -35,6 +35,8 @@ extension URLRequest{
                 request.allHTTPHeaderFields = headers
                 return URLSession.shared.rx.data(request: request)
             }.map { data -> JSON? in
+                let json: JSON = JSON(data)
+                print("response:   \(json)")
                 return JSON(data)
             }.asObservable()
     }
