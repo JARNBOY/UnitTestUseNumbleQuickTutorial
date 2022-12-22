@@ -8,6 +8,7 @@ PODS:
     - SDWebImage/Core (= 5.14.2)
   - SDWebImage/Core (5.14.2)
   - SwiftyJSON (5.0.1)
+  - Wormholy (1.6.5)
 
 DEPENDENCIES:
   - Nimble
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - SDWebImage
   - SwiftyJSON
+  - Wormholy
 
 SPEC REPOS:
   trunk:
@@ -25,6 +27,7 @@ SPEC REPOS:
     - RxSwift
     - SDWebImage
     - SwiftyJSON
+    - Wormholy
 
 SPEC CHECKSUMS:
   Nimble: 516ac503a0fafaa8e41dbb4a70a61be421fa893a
@@ -33,7 +36,8 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Wormholy: 3252bc3e55a1847ef9a0976c1377bd77bf3635fa
 
-PODFILE CHECKSUM: 9cb9a26947f425f8dc19eb87b1618cf695324e05
+PODFILE CHECKSUM: 7061d8e5d40c7bad8f60f1551a25a086b9818539
 
 COCOAPODS: 1.11.3
