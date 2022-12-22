@@ -10,6 +10,7 @@ target 'UnitTestUseNumbleQuickTutorial' do
   pod 'RxCocoa', '~> 4.0'
   pod 'SwiftyJSON'
   pod 'SDWebImage'
+#  pod 'Wormholy', :configurations => ['Debug']
   
   target 'UnitTestUseNumbleQuickTutorialTests' do
     inherit! :search_paths

@@ -50,4 +50,8 @@ extension DisplayImageDetailMockObject {
     var mockGetExtraNameText: String {
         return "This name is mock person from mock picsum"
     }
+    
+    var mockIdImage: String {
+        return "116"
+    }
 }

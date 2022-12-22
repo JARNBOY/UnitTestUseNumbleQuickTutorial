@@ -52,3 +52,41 @@ class DisplayImageDetailInteractorTests: QuickSpec {
         }
     }
 }
+
+class DisplayImageDetailMockWorker: DisplayImageDetailWorker {
+    var isFail:Bool = false
+    let mock = DisplayImageDetailMockObject()
+    
+    override func getImageDisplay(imageRandomId: String, aCompletion: @escaping (DisplayImageDetailModels.DetailModels.Response?) -> Void, fail: @escaping (String?) -> ()) {
+        
+        if !isFail {
+            aCompletion(mock.toPicsumPhotosInfoSuccess())
+        } else {
+            fail(mock.toFailureError())
+        }
+    }
+}
+
+class DisplayImageDetailMockPresenter: DisplayImageDetailPresenter {
+    
+    var isCallProcessShowStartLoadingView : Bool = false
+    var isCallProcessShowStopLoadingView : Bool = false
+    var isCallProcessShowDisplayImageDetailView : Bool = false
+    var isCallProcessShowGeneralErrorView : Bool = false
+    
+    override func presentDisplayImage(response: DisplayImageDetailModels.DetailModels.Response?) {
+        isCallProcessShowDisplayImageDetailView = true
+    }
+    
+    override func presentStartLoading() {
+        isCallProcessShowStartLoadingView = true
+    }
+    
+    override func presentStopLoading() {
+        isCallProcessShowStopLoadingView = true
+    }
+    
+    override func presentError() {
+        isCallProcessShowGeneralErrorView = true
+    }
+}

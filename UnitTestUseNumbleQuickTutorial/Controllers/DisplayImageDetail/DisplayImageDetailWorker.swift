@@ -21,7 +21,7 @@ class DisplayImageDetailWorker {
         service = aService
     }
     // MARK: Business Logic
-    func getLoanCancelReasonList(imageRandomId: String,aCompletion: @escaping (DisplayImageDetailModels.DetailModels.Response?) -> Void, fail: @escaping (_ error: String?) -> ()) {
+    func getImageDisplay(imageRandomId: String,aCompletion: @escaping (DisplayImageDetailModels.DetailModels.Response?) -> Void, fail: @escaping (_ error: String?) -> ()) {
         
         service.requestImageDisplayDetails(imageRandomId: imageRandomId) { aJSON in
             aCompletion(DisplayImageDetailModels.DetailModels.Response(json: aJSON))

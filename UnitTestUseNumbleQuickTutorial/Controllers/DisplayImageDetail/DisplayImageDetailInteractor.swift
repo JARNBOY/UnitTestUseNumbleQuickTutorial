@@ -28,7 +28,7 @@ class DisplayImageDetailInteractor: DisplayImageDetailBusinessLogic, DisplayImag
     // MARK: Do something
     func requestDisplayImage(request: DisplayImageDetailModels.DetailModels.Request) {
         self.presenter?.presentStartLoading()
-        worker.getLoanCancelReasonList(imageRandomId: request.imageID,aCompletion: { responseModel in
+        worker.getImageDisplay(imageRandomId: request.imageID,aCompletion: { responseModel in
             self.presenter?.presentStopLoading()
             self.presenter?.presentDisplayImage(response: responseModel)
         }, fail: { error in
